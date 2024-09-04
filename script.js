@@ -1,7 +1,4 @@
-// window.addEventListener('load', () => {
-//     const content = document.querySelector('.content');
-//     content.classList.add('loaded'); // Add the "loaded" class after the page loads
-// });
+
 
 const images = document.querySelectorAll(".im");
 const hyperlinks=document.querySelectorAll(".hyper")
@@ -9,11 +6,11 @@ const hyperlinks=document.querySelectorAll(".hyper")
 
 
 images.forEach((item,index) => {
-    // w=item.parentElement[1].width
+    
    
     item.addEventListener("mouseover", () => {
        
-        item.src = "Logo.jpg"
+        item.src = "./assets/Logo.jpg"
         item.style.borderRadius = "25px";
         item.parentElement.style.borderRadius="25px"
   
@@ -21,8 +18,7 @@ images.forEach((item,index) => {
     });
 
     item.addEventListener("mouseout", () => {
-       
-        item.src = `${index+1}.png`;
+        item.src = `./assets/${index+1}.png`;
         item.style.borderRadius = "5%";
         item.parentElement.style.borderRadius="5%"
     });
